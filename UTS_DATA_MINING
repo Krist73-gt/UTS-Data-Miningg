@@ -1,0 +1,50 @@
+Nama :Khristofer Dalope
+Nim  :231011403433
+Kelas:04TPLP025
+
+1.Klasifikasi adalah teknik data mining yang mengelompokkan data ke dalam kategori tertentu berdasarkan atributnya,
+seperti deteksi spam (memisahkan email spam dan non-spam) atau diagnosis penyakit (mengidentifikasi jenis penyakit dari gejala).
+Prosesnya melibatkan pembuatan model dari data latih (training data), pengujian akurasi model dengan data uji (testing), dan
+penggunaan model untuk prediksi data baru. Contoh implementasi menggunakan Python dengan library scikit-learn meliputi pemisahan dataset
+(train_test_split), pelatihan model (seperti RandomForestClassifier), dan evaluasi akurasi.
+-Studi Kasus Deteksi Spam:
+Sistem memisahkan email spam dan non-spam dengan menganalisis pola kata (contoh: "gratis", "hadiah") dan metadata pengirim. Model dilatih menggunakan dataset berlabel untuk mengenali karakteristik email spam.
+
+2. Decision Tree
+   Decision Tree adalah model klasifikasi berbentuk pohon dengan node akar (atribut pemisah terbaik), cabang (kondisi split seperti "Usia < 30"),
+   dan daun (kelas akhir seperti "Beli Produk = Ya"). Algoritma populer seperti ID3/C4.5 menggunakan information gain,
+   sedangkan CART memakai Gini impurity. Keunggulannya adalah kemudahan interpretasi visual, cocok untuk prediksi keputusan
+   bisnis atau segmentasi pelanggan. Implementasinya di Python menggunakan DecisionTreeClassifier dengan langkah: load data, split,
+   latih model (fit), dan prediksi (predict).
+   -Studi Kasus Pinjaman Bank:
+Bank memprediksi kelayakan nasabah dengan menganalisis atribut seperti gaji, riwayat kredit, dan nilai jaminan. Decision Tree membentuk aturan seperti "Jika gaji > 5 juta DAN riwayat baik → Pinjaman disetujui".
+
+3. Naïve Bayes
+   Naïve Bayes adalah metode probabilistik berbasis Teorema Bayes yang mengasumsikan independensi antar-fitur (asumsi "naif"). Cocok untuk klasifikasi teks seperti analisis sentimen atau filter spam karena kecepatannya menghitung probabilitas. Meski asumsi independensi jarang terpenuhi di dunia nyata, kinerjanya tetap baik untuk dataset besar. Contoh penggunaan dengan GaussianNB dari scikit-learn melibatkan pelatihan model pada data teks yang telah diubah menjadi vektor fitur (TF-IDF atau Bag of Words).
+   -Studi Kasus Analisis Sentimen:
+Mengklasifikasikan ulasan produk di e-commerce menjadi positif/negatif berdasarkan kemunculan kata-kata tertentu. Kata "bagus" dan "puas" diberi bobot tinggi untuk sentimen positif.
+
+4. Dasar Python untuk Data Science
+   Python mendukung analisis data melalui library seperti pandas (manipulasi data), numpy (operasi numerik), matplotlib/seaborn (visualisasi), dan scikit-learn (machine learning). Contoh workflow meliputi pembacaan data (pd.read_csv), pembersihan data (handle missing value dengan fillna), eksplorasi (statistik deskriptif), dan transformasi data (normalisasi dengan StandardScaler).
+   -studi Kasus Retail:
+Toko online menggunakan pandas untuk membersihkan data transaksi (menghapus duplikat) dan matplotlib untuk visualisasi produk terlaris per kuartal.
+
+5. Decision Tree dengan Python
+   Implementasi Decision Tree menggunakan DecisionTreeClassifier dari scikit-learn dimulai dengan load dataset (contoh: Iris), split data (train_test_split), pelatihan model (fit), dan prediksi (predict). Evaluasi dilakukan dengan metrik seperti akurasi (accuracy_score) atau matriks kebingungan (confusion_matrix). Hyperparameter seperti max_depth dapat dioptimasi untuk menghindari overfitting.
+   -Studi Kasus Klasifikasi Bunga:
+Mengidentifikasi spesies bunga Iris (setosa, versicolor, virginica) berdasarkan 4 atribut fisik kelopak menggunakan dataset Iris dari scikit-learn.
+
+6. Konsep Forecasting
+   Forecasting memprediksi nilai numerik masa depan (seperti penjualan atau suhu) berbeda dengan klasifikasi yang fokus pada kategori. Metode seperti Support Vector Regression (SVR) mengadaptasi SVM untuk regresi dengan meminimalkan error toleransi (ε-insensitive loss). Contoh kasus: prediksi harga saham menggunakan SVR dengan kernel RBF setelah normalisasi data.
+   -Studi Kasus Harga Saham:
+Perusahaan sekuritas memprediksi harga saham minggu depan dengan SVR, menggunakan data historis volume perdagangan dan harga penutupan.
+
+7. Jenis Data & Kualitas Data
+   Data terbagi menjadi kualitatif (deskriptif seperti gender) dan kuantitatif (numerik seperti pendapatan). Kualitas data dinilai dari kelengkapan (tidak ada missing value), konsistensi (tidak kontradiktif), akurasi (mencerminkan realitas), dan keterkinian (up-to-date). Tahap preprocessing seperti pembersihan data (dropna), integrasi (gabung dataset), transformasi (encoding kategori), dan reduksi (PCA) krusial sebelum analisis.
+   -Studi Kasus Data Pasien:
+Rumah sakit membersihkan database pasien dengan mengisi nilai kosong pada kolom tekanan darah menggunakan rata-rata per usia.
+
+8. Teknik Pengukuran Data
+   Skala pengukuran meliputi nominal (kategori tanpa urutan: warna), ordinal (bertingkat: rating kepuasan), interval (jarak tetap: suhu Celsius), dan rasio (memiliki nol absolut: berat). Pemilihan skala memengaruhi analisis statistik, seperti penggunaan modus untuk data nominal atau mean untuk interval/rasio.
+Studi Kasus Survei:
+Penelitian kepuasan mahasiswa menggunakan skala ordinal 1=sangat tidak puas hingga 5=sangat puas untuk mengukur kualitas pengajaran.
